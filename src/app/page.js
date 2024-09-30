@@ -1,6 +1,5 @@
-import HomePageScreen from "@/components/home-page";
 import React from "react";
-
+import HomePageScreen from "../components/home-page";
 const HomePage = () => {
   return <HomePageScreen />;
 };

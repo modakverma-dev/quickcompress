@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle, Image, Upload } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-function HomePageScreen() {
+const HomePageScreen = () => {
   const router = useRouter();
   return (
     <div className="flex flex-col min-h-screen">
@@ -167,6 +167,6 @@ function HomePageScreen() {
       </main>
     </div>
   );
-}
+};
 
 export default HomePageScreen;
