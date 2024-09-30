@@ -19,8 +19,8 @@ const UploadImage = ({
     setCompressionLevel(value[0]);
   };
   return (
-    <div className="container mx-auto px-4 pt-5">
-      <Card className="w-full max-w-2xl mx-auto">
+    <div className="container mx-auto pt-5">
+      <Card className="w-full max-w-3xl mx-auto">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
             Image Compression Dashboard
