@@ -78,7 +78,7 @@ const DashboardPageContent = () => {
     }
   }, [file, router]);
   return (
-    <main className="pb-10 pt-20 w-full h-full px-5 flex flex-col gap-10 row-start-2 items-center">
+    <main className="pb-10 bg-neutral-50 pt-20 w-full h-full px-5 flex flex-col gap-10 row-start-2 items-center">
       <div className="w-full h-full items-center flex gap-4 flex-col sm:flex-row">
         <UploadImage
           file={file}
