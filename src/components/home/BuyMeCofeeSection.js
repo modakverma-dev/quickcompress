@@ -14,10 +14,10 @@ export default function BuyMeCoffeeSection() {
           width={250}
           height={250}
         />
-        <h2 className="text-3xl font-bold text-amber-900 mb-4">
+        <h2 className="text-3xl font-bold text-primary mb-4">
           Enjoy My Content? Buy Me a Coffee!
         </h2>
-        <p className="text-lg text-amber-800 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-primary/80 mb-8 max-w-2xl mx-auto">
           If you find my work helpful or entertaining, consider supporting me
           with a virtual coffee. Your support helps me create more amazing
           content for you!
@@ -31,7 +31,7 @@ export default function BuyMeCoffeeSection() {
           <Coffee className="mr-2 h-5 w-5" />
           Buy Me a Coffee
         </a>
-        <p className="mt-6 text-amber-700 text-sm">
+        <p className="mt-6 text-primary/70 text-sm">
           Every sip of support is deeply appreciated!
         </p>
       </div>

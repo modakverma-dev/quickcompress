@@ -6,7 +6,7 @@ import buymeCoffeeIcon from "@/app/buy-me-a-coffee-icon.png";
 
 const Header = () => {
   return (
-    <header className="z-20 px-4 lg:px-6 h-14 flex items-center fixed top-0 w-full bg-white border">
+    <header className="z-50 px-4 lg:px-6 h-14 flex items-center fixed top-0 w-full bg-white border">
       <Logo />
       <nav className="ml-auto flex items-center gap-4 sm:gap-6">
         <Link
