@@ -2,7 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, CheckCircle, Image, Upload } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Image as ImageIcon,
+  Upload,
+} from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -97,7 +102,7 @@ const HomePageContent = () => {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <Image className="h-8 w-8" />
+                <ImageIcon className="h-8 w-8" />
                 <h3 className="text-xl font-bold">3. Download</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-center">
                   Get your compressed images instantly.
