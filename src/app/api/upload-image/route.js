@@ -1,5 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
 import sharp from "sharp";
 
 export async function POST(request) {
@@ -7,36 +5,34 @@ export async function POST(request) {
     const formData = await request.formData();
     const image = formData.get("image");
     const compression = parseInt(formData.get("compression"));
+
     if (!image || image.size === 0) {
       return new Response(
         JSON.stringify({ message: "Please select an image" }),
         { status: 400 }
       );
     }
+
     const validTypes = ["image/png", "image/jpeg"];
     if (!validTypes.includes(image.type)) {
-      return new Response(
-        JSON.stringify({ message: "Invalid image type", status: 400 }),
-        {
-          status: 400,
-        }
-      );
+      return new Response(JSON.stringify({ message: "Invalid image type" }), {
+        status: 400,
+      });
     }
+
     const fileBuffer = Buffer.from(await image.arrayBuffer());
-    const fileName = `${Date.now()}-${image.name}`;
-    const filePath = path.join("temp-uploads", fileName);
-    const compressedFilePath = path.join("uploads", fileName);
-    await fs.writeFile(filePath, fileBuffer);
-    await sharp(filePath)
+
+    const compressedImageBuffer = await sharp(fileBuffer)
       .resize({ width: 800 })
       .toFormat(image.type.split("/")[1], { quality: compression })
-      .toFile(compressedFilePath);
-    await fs.unlink(filePath);
-    const compressedImageBuffer = await fs.readFile(compressedFilePath);
+      .toBuffer();
+
     const contentType = image.type;
+    const compressedSize = compressedImageBuffer.length;
     return new Response(
       JSON.stringify({
-        file: compressedImageBuffer,
+        file: compressedImageBuffer.toString("base64"),
+        size: compressedSize,
         message: "File compressed successfully",
         status: 200,
       }),

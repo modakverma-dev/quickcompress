@@ -49,11 +49,9 @@ const DashboardPageContent = () => {
       const result = await response.json();
       if (result.status === 200) {
         toast.success(result?.message);
-        const arrayBuffer = new Uint8Array(result.file.data).buffer;
-        const blob = new Blob([arrayBuffer], { type: result.file.type });
-        const url = URL.createObjectURL(blob);
-        setComperssedImgSize(getFileSize(blob?.size));
-        setComperssedImgUrl(url);
+        const imageSrc = `data:image/jpeg;base64,${result.file}`;
+        setComperssedImgSize(getFileSize(result?.size));
+        setComperssedImgUrl(imageSrc);
       } else if (result.status === 400) {
         toast.error(result?.message);
       } else {
