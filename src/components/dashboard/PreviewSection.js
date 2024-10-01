@@ -36,7 +36,6 @@ const PreviewSection = ({ previewUrl, file, setFile, loading }) => {
         croppedAreaPixels,
         rotation
       );
-      console.log(croppedImage, "croppedImage");
       setFile(croppedImage);
       setIsDialogOpen(false);
     } catch (error) {

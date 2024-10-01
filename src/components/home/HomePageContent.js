@@ -10,14 +10,17 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import BuyMeCoffeeSection from "./BuyMeCofeeSection";
+import GeometricCompressionBackground from "../Icons/GeometricCompressionBackground";
 
 const HomePageContent = () => {
   const router = useRouter();
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <section className="w-full flex flex-col items-center py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
+        <section className="w-full flex flex-col items-center py-12 md:py-24 lg:py-32 xl:py-48 relative">
+          <GeometricCompressionBackground />
+          <div className="z-20 container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
@@ -50,7 +53,7 @@ const HomePageContent = () => {
         </section>
         <section
           id="section1"
-          className="w-full flex flex-col items-center py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+          className="w-full flex flex-col items-center py-12 md:py-24 lg:py-32 bg-gradient-to-r from-secondary/30 to-secondary/10 dark:bg-gray-800"
         >
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
@@ -58,21 +61,21 @@ const HomePageContent = () => {
             </h2>
             <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <CheckCircle className="h-8 w-8 text-green-500" />
+                <CheckCircle className="h-8 w-8 text-primary" />
                 <h3 className="text-xl font-bold">Lightning Fast</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-center">
                   Compress images in seconds, not minutes.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <CheckCircle className="h-8 w-8 text-green-500" />
+                <CheckCircle className="h-8 w-8 text-primary" />
                 <h3 className="text-xl font-bold">Quality Preserved</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-center">
                   Maintain image quality while reducing file size.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <CheckCircle className="h-8 w-8 text-green-500" />
+                <CheckCircle className="h-8 w-8 text-primary" />
                 <h3 className="text-xl font-bold">Secure & Private</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-center">
                   Your images are deleted after compression.
@@ -81,7 +84,7 @@ const HomePageContent = () => {
             </div>
           </div>
         </section>
-        <section className="w-full flex flex-col items-center py-12 md:py-24 lg:py-32">
+        <section className="w-full flex flex-col items-center py-12 md:py-24 lg:py-28">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
               How It Works
@@ -93,6 +96,12 @@ const HomePageContent = () => {
                 <p className="text-gray-500 dark:text-gray-400 text-center">
                   Select the images you want to compress.
                 </p>
+                <ul className="text-xs text-neutral-500 list-disc leading-relaxed">
+                  <li>
+                    Upload your images in PNG, JPG, JPEG, WEBP or AVIF formats{" "}
+                  </li>
+                  <li>Upload size of upto 25 MBs supported </li>
+                </ul>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
                 <ArrowRight className="h-8 w-8" />
@@ -100,6 +109,12 @@ const HomePageContent = () => {
                 <p className="text-gray-500 dark:text-gray-400 text-center">
                   Our algorithm optimizes your images.
                 </p>
+                <ul className="text-xs text-neutral-500 list-disc leading-relaxed">
+                  <li>
+                    Lightening fast compression with minimal loss of quality{" "}
+                  </li>
+                  <li>Customize your images before compressing</li>
+                </ul>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
                 <ImageIcon className="h-8 w-8" />
@@ -107,11 +122,20 @@ const HomePageContent = () => {
                 <p className="text-gray-500 dark:text-gray-400 text-center">
                   Get your compressed images instantly.
                 </p>
+                <ul className="text-xs text-neutral-500 list-disc leading-relaxed">
+                  <li>
+                    Click on download button to get your compressed image! 🚀
+                  </li>
+                  <li>
+                    Customised charts, displays the compression levels and space
+                    you saved.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
-        <section className="w-full flex flex-col items-center py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="w-full flex flex-col items-center py-12 md:py-24 lg:py-32 bg-gradient-to-r from-secondary/30 to-secondary/10 dark:bg-gray-800">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
               What Our Users Say
@@ -122,21 +146,21 @@ const HomePageContent = () => {
                   &ldquo;CompressNow has saved me so much time and storage
                   space. It&apos;s a game-changer!&ldquo;
                 </p>
-                <p className="font-semibold">- Sarah K., Photographer</p>
+                <p className="font-semibold">- Ujjwal S., Photographer</p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
                 <p className="text-gray-500 dark:text-gray-400 text-center italic">
                   &ldquo;I use CompressNow for all my web projects. It&apos;s
                   fast, efficient, and reliable.&ldquo;
                 </p>
-                <p className="font-semibold">- Mike T., Web Developer</p>
+                <p className="font-semibold">- Sahil B., Web Developer</p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
                 <p className="text-gray-500 dark:text-gray-400 text-center italic">
                   &ldquo;The quality of compressed images is impressive. Highly
                   recommended!&ldquo;
                 </p>
-                <p className="font-semibold">- Emily R., Graphic Designer</p>
+                <p className="font-semibold">- Praveen C., Software Tester</p>
               </div>
             </div>
           </div>
@@ -169,6 +193,7 @@ const HomePageContent = () => {
             </div>
           </div>
         </section>
+        <BuyMeCoffeeSection />
       </main>
     </div>
   );
