@@ -180,11 +180,13 @@ const HomePageContent = () => {
               <div className="w-full max-w-sm space-y-2">
                 <form className="flex space-x-2">
                   <Input
-                    className="max-w-lg flex-1"
+                    className="max-w-lg text-base flex-1"
                     placeholder="Enter your email"
                     type="email"
                   />
-                  <Button type="submit">Subscribe</Button>
+                  <Button className="text-lg font-semibold" type="submit">
+                    Subscribe
+                  </Button>
                 </form>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
                   Get notified about new features and updates. No spam.
