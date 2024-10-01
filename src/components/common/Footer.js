@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Facebook,
-  Github,
-  Image,
-  Instagram,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
+import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -29,7 +22,7 @@ const Footer = () => {
           Privacy
         </Link>
       </nav>
-      <div className="flex gap-4 sm:gap-6">
+      <div className="flex gap-4 sm:gap-6 ml-8">
         <Link className="text-xs hover:underline underline-offset-4" href="#">
           <Facebook className="h-4 w-4" />
         </Link>
